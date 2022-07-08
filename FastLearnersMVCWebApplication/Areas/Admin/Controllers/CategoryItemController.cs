@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FastLearnersMVCWebApplication.Data;
 using FastLearnersMVCWebApplication.Entities;
+using FastLearnersMVCWebApplication.Extentions;
 
 namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
 {
@@ -21,10 +22,10 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         }
 
         // GET: Admin/CategoryItem
-        public async Task<IActionResult> Index(int CategoryId)
+        public async Task<IActionResult> Index(int categoryId)
         {
             List<CategoryItem> List = await (from categoryItem in _context.CategoryItem
-                                      where categoryItem.CategoryId == CategoryId
+                                      where categoryItem.CategoryId == categoryId
                                       select new CategoryItem
                                       {
                                           CategoryId = categoryItem.Id,
@@ -35,6 +36,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                                           DateTimeItemReleased = categoryItem.DateTimeItemReleased
                                       }).ToListAsync();
 
+            ViewBag.CategoryId = categoryId;
             return View(List);
         }
 
@@ -57,9 +59,16 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         }
 
         // GET: Admin/CategoryItem/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int categoryId)
         {
-            return View();
+            List<MediaType> mediaTypes = await _context.MediaType.ToListAsync();
+            CategoryItem categoryItem = new CategoryItem
+            {
+                CategoryId = categoryId,
+                MediaTypes = mediaTypes.ToSelectList(0)
+            };
+
+            return View(categoryItem);
         }
 
         // POST: Admin/CategoryItem/Create
@@ -73,7 +82,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
             {
                 _context.Add(categoryItem);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
             }
             return View(categoryItem);
         }
