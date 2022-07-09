@@ -25,16 +25,16 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int categoryId)
         {
             List<CategoryItem> List = await (from categoryItem in _context.CategoryItem
-                                      where categoryItem.CategoryId == categoryId
-                                      select new CategoryItem
-                                      {
-                                          CategoryId = categoryItem.Id,
-                                          Description = categoryItem.Description,
-                                          Id = categoryItem.Id,
-                                          Title = categoryItem.Title,
-                                          MediaTypeId = categoryItem.MediaTypeId,
-                                          DateTimeItemReleased = categoryItem.DateTimeItemReleased
-                                      }).ToListAsync();
+                                             where categoryItem.CategoryId == categoryId
+                                             select new CategoryItem
+                                             {
+                                                 CategoryId = categoryItem.Id,
+                                                 Description = categoryItem.Description,
+                                                 Id = categoryItem.Id,
+                                                 Title = categoryItem.Title,
+                                                 MediaTypeId = categoryItem.MediaTypeId,
+                                                 DateTimeItemReleased = categoryItem.DateTimeItemReleased
+                                             }).ToListAsync();
 
             ViewBag.CategoryId = categoryId;
             return View(List);
@@ -95,7 +95,10 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            var MediaTypes = await _context.MediaType.ToListAsync();
             var categoryItem = await _context.CategoryItem.FindAsync(id);
+            categoryItem.MediaTypes = MediaTypes.ToSelectList(categoryItem.MediaTypeId);
+
             if (categoryItem == null)
             {
                 return NotFound();
@@ -133,7 +136,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
             }
             return View(categoryItem);
         }
@@ -164,7 +167,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
             var categoryItem = await _context.CategoryItem.FindAsync(id);
             _context.CategoryItem.Remove(categoryItem);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
         }
 
         private bool CategoryItemExists(int id)
