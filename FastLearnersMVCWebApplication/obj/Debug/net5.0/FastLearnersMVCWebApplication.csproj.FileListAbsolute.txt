@@ -174,3 +174,8 @@ D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\CategoryItem\Index.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\Content\Create.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\Content\Edit.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Create.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Delete.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Details.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Edit.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Index.cshtml.g.cs
