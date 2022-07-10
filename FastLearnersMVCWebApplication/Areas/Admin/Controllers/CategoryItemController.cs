@@ -24,21 +24,22 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         // GET: Admin/CategoryItem
         public async Task<IActionResult> Index(int categoryId)
         {
-            List<CategoryItem> List = await (from categoryItem in _context.CategoryItem
-                                             join content in _context.Content
-                                             on categoryItem.Id equals content.CategoryItem.Id
+            List<CategoryItem> List = await (from catItem in _context.CategoryItem
+                                             join contentItem in _context.Content
+                                             on catItem.Id equals contentItem.CategoryItem.Id
                                              into gj
-                                             from item in gj.DefaultIfEmpty()
-                                             where categoryItem.CategoryId == categoryId
+                                             from subContent in gj.DefaultIfEmpty()
+                                             where catItem.CategoryId == categoryId
                                              select new CategoryItem
-                                             {
-                                                 CategoryId = categoryItem.Id,
-                                                 Description = categoryItem.Description,
-                                                 Id = categoryItem.Id,
-                                                 Title = categoryItem.Title,
-                                                 MediaTypeId = categoryItem.MediaTypeId,
-                                                 DateTimeItemReleased = categoryItem.DateTimeItemReleased,
-                                                 ContentId = (item != null) ? item.Id : 0
+                                             { 
+                                                Id = catItem.Id,
+                                                Title = catItem.Title,
+                                                Description = catItem.Description,
+                                                DateTimeItemReleased = catItem.DateTimeItemReleased,
+                                                MediaTypeId = catItem.MediaTypeId,
+                                                CategoryId = categoryId,
+                                                ContentId = (subContent != null) ? subContent.Id : 0
+
                                              }).ToListAsync();
 
             ViewBag.CategoryId = categoryId;

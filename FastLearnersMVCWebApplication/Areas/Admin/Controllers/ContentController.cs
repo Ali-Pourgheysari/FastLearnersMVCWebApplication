@@ -44,7 +44,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                 content.CategoryItem =await _context.CategoryItem.FindAsync(content.CatItemId);
                 _context.Add(content);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index), "CategoryItem", new {categoryId = content.CategoryId});
+                return RedirectToAction(nameof(Index), "CategoryItem", new { categoryId = content.CategoryId});
             }
             return View(content);
         }
@@ -97,7 +97,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index), "CategoryItem", new {categoryId = content.CategoryId});
             }
             return View(content);
         }
