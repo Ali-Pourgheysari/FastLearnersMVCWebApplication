@@ -20,6 +20,8 @@ namespace FastLearnersMVCWebApplication.Entities
         public virtual ICollection<SelectListItem> MediaTypes { get; set; }
         [Required]
         public DateTime DateTimeItemReleased { get; set; }
+        [NotMapped]
+        public int ContentId { get; set; }
 
     }
 }

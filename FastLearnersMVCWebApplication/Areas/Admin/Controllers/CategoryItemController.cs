@@ -25,6 +25,10 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int categoryId)
         {
             List<CategoryItem> List = await (from categoryItem in _context.CategoryItem
+                                             join content in _context.Content
+                                             on categoryItem.Id equals content.CategoryItem.Id
+                                             into gj
+                                             from item in gj.DefaultIfEmpty()
                                              where categoryItem.CategoryId == categoryId
                                              select new CategoryItem
                                              {
@@ -33,7 +37,8 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                                                  Id = categoryItem.Id,
                                                  Title = categoryItem.Title,
                                                  MediaTypeId = categoryItem.MediaTypeId,
-                                                 DateTimeItemReleased = categoryItem.DateTimeItemReleased
+                                                 DateTimeItemReleased = categoryItem.DateTimeItemReleased,
+                                                 ContentId = (item != null) ? item.Id : 0
                                              }).ToListAsync();
 
             ViewBag.CategoryId = categoryId;

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FastLearnersMVCWebApplication.Entities
 {
@@ -11,6 +12,9 @@ namespace FastLearnersMVCWebApplication.Entities
         public string HTMLContent { get; set; }
         public string VideoLink { get; set; }
         public CategoryItem CategoryItem { get; set; }
-
+        [NotMapped]
+        public int CatItemId { get; set; }
+        [NotMapped]
+        public int CategoryId { get; set; }
     }
 }
