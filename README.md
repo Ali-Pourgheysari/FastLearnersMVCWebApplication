@@ -1,2 +1,2 @@
 # FastLearnersMVCWebApplication
- A web application for free tutorials using .net 5
+ A web application using .net 5
