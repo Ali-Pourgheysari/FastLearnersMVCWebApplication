@@ -12,6 +12,7 @@ namespace FastLearnersMVCWebApplication.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         [Required]
+        [Display(Name = "Thumbnail Image Path")]
         public string ThumbnailImagePath { get; set; }
         [ForeignKey("CategoryId")]
         public virtual ICollection<CategoryItem> CategoryItems { get; set; }

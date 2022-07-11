@@ -16,10 +16,13 @@ namespace FastLearnersMVCWebApplication.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public int CategoryId { get; set; }
+        [Required(ErrorMessage = "Please select a valid item from the '{0}' dropdown list")]
+        [Display(Name = "Media Type")]
         public int MediaTypeId { get; set; }
         [NotMapped]
         public virtual ICollection<SelectListItem> MediaTypes { get; set; }
         [Required]
+        [Display(Name = "Release Date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DateTimeItemReleased 
         {

@@ -90,6 +90,9 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
             }
+            List<MediaType> mediaTypes = await _context.MediaType.ToListAsync();
+            categoryItem.MediaTypes = mediaTypes.ToSelectList(categoryItem.MediaTypeId);
+
             return View(categoryItem);
         }
 
