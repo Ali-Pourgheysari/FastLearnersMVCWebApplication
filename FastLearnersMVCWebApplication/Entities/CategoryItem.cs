@@ -9,6 +9,7 @@ namespace FastLearnersMVCWebApplication.Entities
 {
     public class CategoryItem
     {
+        private DateTime _releasedDate = DateTime.MinValue;
         public int Id { get; set; }
         [Required]
         [StringLength(200, MinimumLength = 3)]
@@ -19,7 +20,18 @@ namespace FastLearnersMVCWebApplication.Entities
         [NotMapped]
         public virtual ICollection<SelectListItem> MediaTypes { get; set; }
         [Required]
-        public DateTime DateTimeItemReleased { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime DateTimeItemReleased 
+        {
+            get
+            {
+                return (_releasedDate == DateTime.MinValue) ? DateTime.Now : _releasedDate;
+            }
+            set
+            {
+                _releasedDate = value;
+            }
+        }
         [NotMapped]
         public int ContentId { get; set; }
 
