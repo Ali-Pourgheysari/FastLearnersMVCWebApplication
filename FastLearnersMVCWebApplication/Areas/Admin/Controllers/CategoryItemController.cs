@@ -8,10 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using FastLearnersMVCWebApplication.Data;
 using FastLearnersMVCWebApplication.Entities;
 using FastLearnersMVCWebApplication.Extentions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class CategoryItemController : Controller
     {
         private readonly ApplicationDbContext _context;
