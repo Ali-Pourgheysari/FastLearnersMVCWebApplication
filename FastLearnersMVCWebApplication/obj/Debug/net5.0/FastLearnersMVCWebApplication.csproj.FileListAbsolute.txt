@@ -180,3 +180,8 @@ D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Edit.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\MediaType\Index.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Shared\_DateScriptsPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Shared\_UserLoginPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
