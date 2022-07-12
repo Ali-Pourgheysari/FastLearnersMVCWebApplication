@@ -6,6 +6,7 @@ namespace FastLearnersMVCWebApplication.Models
     {
         [Required]
         [StringLength(100, MinimumLength =3)]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
         [StringLength(100, MinimumLength = 3)]

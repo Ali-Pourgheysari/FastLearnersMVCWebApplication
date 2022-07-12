@@ -54,6 +54,5 @@
                 console.error(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             }
         });
-        alert("hi")
     }
 });
