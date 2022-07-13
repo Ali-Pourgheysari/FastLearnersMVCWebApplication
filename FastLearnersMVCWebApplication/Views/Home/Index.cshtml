@@ -1,15 +1,34 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@using FastLearnersMVCWebApplication.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> 
-@{//move userloginpartial code to userlogin
+@if(SignInManager.IsSignedIn(User))
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to FastLearners</h1>
+    </div> 
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Not logged in</h1>
+    </div> 
 }
 
+<div class="modal fade" id="UserLoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <partial name="_UserLoginPartial" />
+</div>
+
+<div class="modal fade" id="UserRegistrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <partial name="_UserRegistrationPartial" />
+</div>
+
 @section Scripts {
+
     <script src="~/js/UserLogin.js" asp-append-version="true"></script>
+    <script src="~/js/UserRegistration.js" asp-append-version="true"></script>
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
