@@ -187,3 +187,5 @@ D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\FastLearnersMVCWebApplication.genruntimeconfig.cache
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\ref\FastLearnersMVCWebApplication.dll
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Shared\_AuthScriptsPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_UsersListViewPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\UsersToCategory\Index.cshtml.g.cs
