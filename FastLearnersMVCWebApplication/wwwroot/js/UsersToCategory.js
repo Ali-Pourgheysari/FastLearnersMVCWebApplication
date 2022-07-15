@@ -4,7 +4,7 @@
 
     $("button[name='SaveSelectedUsers']").prop('disabled', true);
 
-    $('select').on('change', function () {
+    $("#selectdiv select").on('change', function () {
 
         var url = "/Admin/UsersToCategory/GetUsersForCategory";
 

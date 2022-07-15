@@ -10,7 +10,7 @@
 <form id="MembersToCategory" asp-action="Index">
     <div class="row">
         <div class="col-md-4">
-            <div class="form-group">
+            <div class="form-group" id="selectdiv">
                 <h4>Category</h4>
                 <select id="CategoryId" name="CategoryId" class="form-control" asp-items="Model.ToSelectList(1)">
                     <option value="0">--Please choose a Category--</option>
