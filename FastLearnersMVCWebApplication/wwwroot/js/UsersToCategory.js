@@ -6,15 +6,16 @@
 
     $('select').on('change', function () {
 
-        var url = "/Admin/UsersToCategory/GetUsersForCategory?categoryId=" + this.value;
+        var url = "/Admin/UsersToCategory/GetUsersForCategory";
 
         if (this.value != 0) {
             $.ajax(
                 {
                     type: "GET",
                     url: url,
+                    data: this.value, //changed 
                     success: function (data) {
-                        $("#UsersCheckList").html(data);
+                        //$("#UsersCheckList").html(data);
                         $("button[name='SaveSelectedUsers']").prop('disabled', false);
                     },
                     error: function (xhr, ajaxOptions, thrownError) {

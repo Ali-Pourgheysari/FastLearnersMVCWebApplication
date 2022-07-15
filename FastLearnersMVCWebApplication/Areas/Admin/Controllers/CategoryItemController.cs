@@ -161,8 +161,7 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var categoryItem = await _context.CategoryItem
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var categoryItem = await _context.CategoryItem.FirstOrDefaultAsync(m => m.Id == id);
             if (categoryItem == null)
             {
                 return NotFound();
@@ -177,6 +176,11 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var categoryItem = await _context.CategoryItem.FindAsync(id);
+            var content = await (from c in _context.Content
+                                 where c.CategoryItem.Id == id
+                                 select c).ToListAsync();
+
+            _context.Content.Remove(content.FirstOrDefault());
             _context.CategoryItem.Remove(categoryItem);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
