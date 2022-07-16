@@ -104,8 +104,8 @@ body {
     inset: 0;
     margin: auto;
     text-align: center;
-    width: 180px;
-    height: 80px;
+    width: 200px;
+    height: 100px;
     background-color: rgba(0,0,0, 0.3);
     padding: 10px;
     display: flex;

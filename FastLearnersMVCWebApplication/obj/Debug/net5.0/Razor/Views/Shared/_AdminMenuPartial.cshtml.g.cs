@@ -27,6 +27,13 @@ using FastLearnersMVCWebApplication.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 3 "D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\Views\_ViewImports.cshtml"
+using FastLearnersMVCWebApplication.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\Views\Shared\_AdminMenuPartial.cshtml"
 using Microsoft.AspNetCore.Identity;
 
@@ -41,7 +48,7 @@ using FastLearnersMVCWebApplication.Data;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c882290256a6bc2c5d5d608583291aebbb219b82", @"/Views/Shared/_AdminMenuPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac6efd2b4ab5d4c0b7b7f781920f12af98d74d6d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"72761f8e6591837ff3fe363358ceb927cf8f139b", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__AdminMenuPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -87,7 +94,7 @@ using FastLearnersMVCWebApplication.Data;
 #line hidden
 #nullable disable
             WriteLiteral("    <li class=\"nav-item dropdown show\">\r\n        <a class=\"dropdown-toggle nav-link text-dark\" href=\"#\" data-toggle=\"dropdown\">Admin</a>\r\n        <div class=\"dropdown-menu\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b826223", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b826453", async() => {
                 WriteLiteral("Categories");
             }
             );
@@ -108,7 +115,7 @@ using FastLearnersMVCWebApplication.Data;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b827883", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b828113", async() => {
                 WriteLiteral("Users to Category");
             }
             );
@@ -129,7 +136,7 @@ using FastLearnersMVCWebApplication.Data;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            <div class=\"dropdown-divider\"></div>\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b829604", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c882290256a6bc2c5d5d608583291aebbb219b829834", async() => {
                 WriteLiteral("Media Types");
             }
             );
