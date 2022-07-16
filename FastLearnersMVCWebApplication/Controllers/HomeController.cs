@@ -92,8 +92,7 @@ namespace FastLearnersMVCWebApplication.Controllers
 
         private async Task<IEnumerable<CategoryItemDetailsModel>> GetCategoryItemDetailsForUser(string userId)
         {
-            var temp = 
-             await (from catItem in _context.CategoryItem
+            return await (from catItem in _context.CategoryItem
                           join category in _context.Category
                           on catItem.CategoryId equals category.Id
                           join content in _context.Content
@@ -112,7 +111,6 @@ namespace FastLearnersMVCWebApplication.Controllers
                               CategoryItemDescription = catItem.Description,
                               MediaImagePath = mediaType.ThumbnailImagePath
                           }).ToListAsync();
-            return temp;
         }
 
 

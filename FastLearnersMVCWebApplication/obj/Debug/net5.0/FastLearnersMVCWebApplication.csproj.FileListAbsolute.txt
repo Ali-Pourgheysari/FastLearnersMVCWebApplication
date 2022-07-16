@@ -190,3 +190,5 @@ D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_UsersListViewPartial.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Areas\Admin\Views\UsersToCategory\Index.cshtml.g.cs
 D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Content\Index.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Shared\_DefaultHomePageContentPartial.cshtml.g.cs
+D:\Visual Studio\FastLearnersMVCWebApplication\FastLearnersMVCWebApplication\obj\Debug\net5.0\Razor\Views\Shared\_DisplayCardRowPartial.cshtml.g.cs

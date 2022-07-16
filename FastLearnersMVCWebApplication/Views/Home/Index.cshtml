@@ -7,13 +7,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-@if (SignInManager.IsSignedIn(User))
+@if (Model.GroupedCategoryItemsByCategoryModels != null)
 {
     <div class="row">
         <div class="col-md-6">
             <h2>Your Courses</h2>
         </div>
+        <div class="col-md-6 text-right">
+            <a asp-controller="CategoriesToUser" asp-action="Index" class="btn btn-outline-dark">Choose Courses</a>
+        </div>
     </div>
+
+    @if (Model.GroupedCategoryItemsByCategoryModels.Count() > 0)
+    {
 
         <div class="row mt-3">
             <div class="col-md-12">
@@ -44,13 +50,16 @@
 
             </div>
         </div>
+    }
+    else
+    {
+        <h4 class="mt-2 text-warning">You are currently not matched with any courses</h4>
 
+    }
 }
 else
 {
-    <div class="text-center">
-        <h1>You are not logged in </h1>
-    </div>
+    <partial name="_DefaultHomePageContentPartial" model="@Model.Categories" />
 }
 
 
