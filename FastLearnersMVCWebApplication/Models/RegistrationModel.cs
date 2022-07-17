@@ -37,5 +37,6 @@ namespace FastLearnersMVCWebApplication.Models
         public string PhoneNumber { get; set; }
         public bool AcceptUserAgreement { get; set; }
         public string RegistrationInValid { get; set; }
+        public int CategoryId { get; set; }
     }
 }
