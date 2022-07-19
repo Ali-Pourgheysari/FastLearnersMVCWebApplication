@@ -179,8 +179,10 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
             var content = await (from c in _context.Content
                                  where c.CategoryItem.Id == id
                                  select c).ToListAsync();
-
-            _context.Content.Remove(content.FirstOrDefault());
+            if (content.FirstOrDefault() != null)
+            {
+                _context.Content.Remove(content.FirstOrDefault());
+            }
             _context.CategoryItem.Remove(categoryItem);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index), new { CategoryId = categoryItem.CategoryId });
