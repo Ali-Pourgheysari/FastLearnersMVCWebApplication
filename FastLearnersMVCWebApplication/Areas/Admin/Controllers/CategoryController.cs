@@ -142,6 +142,21 @@ namespace FastLearnersMVCWebApplication.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var categoryItemsWithContent = await (from content in _context.Content
+                                                  join catitem in _context.CategoryItem
+                                                  on content.CategoryItem.Id equals catitem.Id
+                                                  where catitem.CategoryId == id
+                                                  select new
+                                                  {
+                                                      CategoryItem = catitem,
+                                                      Content = content
+                                                  }).ToListAsync();
+
+            foreach (var item in categoryItemsWithContent)
+            {
+                _context.Content.Remove(item.Content);
+                _context.CategoryItem.Remove(item.CategoryItem);
+            }
             var category = await _context.Category.FindAsync(id);
             _context.Category.Remove(category);
             await _context.SaveChangesAsync();
