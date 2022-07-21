@@ -3,7 +3,7 @@
  This is a web application that provides a platform for learning programming languages and technologies including Videos and articles.
 
 ## Introduction
-Introduction Video:
+To watch the Introduction Video click on the image below.
 <div align="center">
     <a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
         <img src="./src/Thumbnail.png">
