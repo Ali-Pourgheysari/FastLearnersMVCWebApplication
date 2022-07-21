@@ -8,20 +8,58 @@
 * [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
 * [Sql Server](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 * [Asp.Net core Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity)
-- [Identity Server 4](http://identityserver.io/)
-- [Angular 11](https://angular.io/)
-- [Angular CLI 11](https://cli.angular.io/)
-- Secure - with CSP and custom security headers
-- [SignalR](https://github.com/aspnet/SignalR/)
-- [SASS](http://sass-lang.com/)
-- Best [practices](https://angular.io/docs/ts/latest/guide/style-guide.html) for Angular code organisation.
-- [Clean Architecture](https://github.com/jasontaylordev/CleanArchitecture) inspired from Jason Taylor.
-- [PWA support](https://developers.google.com/web/progressive-web-apps/)
-- Fast Unit Testing with [Jest](https://facebook.github.io/jest/).
-- E2E testing with [Protractor](http://www.protractortest.org).l
-- [Compodoc](https://compodoc.github.io/compodoc/) for Angular documentation
-- Login and Registration functionality using [Identity Server implicit flow](http://identityserver.io/)
-- Extensible User/Role identity implementation
-- Social logins support with token based authentication, using [Identity Server](http://identityserver.io/)
-- Angular dynamic forms for reusable and DRY code.
-- [Swagger](http://swagger.io/) as Api explorer (Visit url **https://127.0.0.1:5005/swagger** OR whatever port visual studio has launched the website.). More [details](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
+* [JavaScript](https://www.javascript.com/)
+* [JQuery](https://jquery.com/)
+* [AJAX](https://api.jquery.com/jquery.ajax/)
+* [HTML](https://www.w3schools.com/html/html_intro.asp)
+* Secure - with CSP and custom security headers
+* [Razor](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-6.0)
+* [Bootstrap](https://getbootstrap.com/)
+* [CSS](https://www.w3schools.com/css/css_intro.asp)
+* [Responsive web design](https://www.w3schools.com/html/html_responsive.asp)
+* [SmarterASP.NET Host](https://www.smarterasp.net/)
+* [Font Awesome](https://fontawesome.com/)
+* [GUID](https://www.guidgenerator.com/)
+
+## Pre-requisites
+1. [.Net SDK](https://www.microsoft.com/net/core#windows)]
+2. [Visual studio 2019](https://www.visualstudio.com/) OR [VSCode](https://code.visualstudio.com/) with [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) extension
+3. [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server) (Optional: If MS SQL server required instead of Sqlite during development)
+
+## Installation
+
+1. Clone the repo:
+
+   git clone https://github.com/Ali-Pourgheysari/FastLearnersMVCWebApplication.git
+
+2. Change directory:
+
+   cd AspNetCoreSpa
+
+3. Restore packages:
+
+   dotnet restore AspNetCoreSpa.sln
+
+4. Target Microsoft SQL Server:
+
+    - Run with Microsoft SQL Server:
+    - Delete `Migrations` folder from FastLearnersMVCWebApplication\Data
+    - Change setting in appsettings.json, change `Web` connection string to your local Sql Server connection string
+
+5. Once the project is running first try to add an admin to the database:
+
+    - Run the project
+    - Register as a new user
+    - Go to database Management Studio
+    - Open the related database
+    - Copy Id Property of Registered user (That is a GUID) in AspNetUsers Table and paste it into UserId Property in AspNetUserRoles table 
+    - Make a [GUID](https://www.guidgenerator.com/) for Id Property in AspNetRoles and insert following values in this table:
+        - Id: GUID
+        - Name: Admin
+        - NormalizedName: ADMIN
+    - Copy Id Property of admin in AspNetRoles table and paste it into RoleId Property in AspNetUserRoles table
+   Note: For production use Identity server hosted with appropriate configuration.
+
+Here is the database schema:
+
+<img src="./src/Capture.PNG" width="800">
