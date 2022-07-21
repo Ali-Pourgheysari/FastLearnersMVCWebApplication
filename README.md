@@ -1,9 +1,10 @@
 # FastLearners Web App
  A web application using .net 5 
  This is a web application that provides a platform for learning programming languages and technologies including Videos and articles.
+
 ## Introduction
 <a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
-    <img src="./src/Thumbnail">
+    <img src="./src/Thumbnail.png">
 </a> 
 
 ## Features
