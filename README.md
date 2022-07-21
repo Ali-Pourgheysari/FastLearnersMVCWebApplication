@@ -52,7 +52,7 @@ Introduction Video:
 
     - Run with Microsoft SQL Server:
     - Delete `Migrations` folder from FastLearnersMVCWebApplication\Data
-    - Change setting in appsettings.json, change `Web` connection string to your local Sql Server connection string
+    - Change setting in appsettings.json, change existing connection string to your local Sql Server connection string
 
 5. Once the project is running first try to add an admin to the database:
 
