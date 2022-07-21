@@ -1,6 +1,11 @@
 # FastLearners Web App
- A tutoral web application using .net 5
- 
+ A web application using .net 5 
+ This is a web application that provides a platform for learning programming languages and technologies including Videos and articles.
+## Introduction
+<a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
+    <img src="./src/Thumbnail">
+</a> 
+
 ## Features
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [ASP.NET Core 5](http://www.dot.net/)
@@ -12,7 +17,6 @@
 * [JQuery](https://jquery.com/)
 * [AJAX](https://api.jquery.com/jquery.ajax/)
 * [HTML](https://www.w3schools.com/html/html_intro.asp)
-* Secure - with CSP and custom security headers
 * [Razor](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-6.0)
 * [Bootstrap](https://getbootstrap.com/)
 * [CSS](https://www.w3schools.com/css/css_intro.asp)
@@ -22,9 +26,9 @@
 * [GUID](https://www.guidgenerator.com/)
 
 ## Pre-requisites
-1. [.Net SDK](https://www.microsoft.com/net/core#windows)]
+1. [.Net SDK](https://www.microsoft.com/net/core#windows)
 2. [Visual studio 2019](https://www.visualstudio.com/) OR [VSCode](https://code.visualstudio.com/) with [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) extension
-3. [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server) (Optional: If MS SQL server required instead of Sqlite during development)
+3. [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server)
 
 ## Installation
 
@@ -34,11 +38,11 @@
 
 2. Change directory:
 
-   cd AspNetCoreSpa
+   cd FastLearnersMVCWebApplication
 
 3. Restore packages:
 
-   dotnet restore AspNetCoreSpa.sln
+   dotnet restore FastLearnersMVCWebApplication.sln
 
 4. Target Microsoft SQL Server:
 
@@ -48,7 +52,6 @@
 
 5. Once the project is running first try to add an admin to the database:
 
-    - Run the project
     - Register as a new user
     - Go to database Management Studio
     - Open the related database
@@ -62,4 +65,6 @@
 
 Here is the database schema:
 
+<div align="center">
 <img src="./src/Capture.PNG" width="800">
+</div>
