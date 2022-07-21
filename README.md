@@ -3,9 +3,12 @@
  This is a web application that provides a platform for learning programming languages and technologies including Videos and articles.
 
 ## Introduction
-<a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
-    <img src="./src/Thumbnail.png">
-</a> 
+Introduction Video:
+<div align="center">
+    <a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
+        <img src="./src/Thumbnail.png">
+    </a> 
+</div>
 
 ## Features
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
