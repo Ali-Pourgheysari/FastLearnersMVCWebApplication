@@ -6,7 +6,7 @@
 To watch the Introduction Video click on the image below.
 <div align="center">
     <a href="https://www.youtube.com/watch?v=d0IBWnuCqC4">
-        <img src="./src/Thumbnail.png">
+        <img src="./src/ThumbnailImage.png">
     </a> 
 </div>
 
