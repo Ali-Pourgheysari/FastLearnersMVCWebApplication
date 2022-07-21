@@ -10,7 +10,7 @@ Introduction Video:
     </a> 
 </div>
 
-## Features
+## Technologies
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [ASP.NET Core 5](http://www.dot.net/)
 * [Entity Framework Core](https://docs.efproject.net/en/latest/)
